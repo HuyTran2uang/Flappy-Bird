@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://7s2j1jifmma3"]
+
+[ext_resource type="Texture2D" uid="uid://buj8ry8apyrpy" path="res://Assets/Sprites/button_play_normal.png" id="1_g4l3v"]
+
+[node name="Play Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_g4l3v")

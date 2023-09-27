@@ -1,0 +1,15 @@
+Label
+RichTextLabel
+TextEdit
+Timer
+Sprite2D
+Line2D
+Camera2D
+Node2D
+Area2D
+CollisionShape2D
+Node
+CanvasGroup
+Button
+AnimationPlayer
+CharacterBody2D

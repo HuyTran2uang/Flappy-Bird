@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://b1q57c1tfck4j"]
+
+[ext_resource type="PackedScene" uid="uid://ctbkfs5wy2vcv" path="res://Assets/Nodes/bird.tscn" id="1_b3oc8"]
+[ext_resource type="Texture2D" uid="uid://ca3nn6vcxwi8j" path="res://Assets/Sprites/background.png" id="2_3dddm"]
+[ext_resource type="PackedScene" uid="uid://mwmlqosgaa5j" path="res://Assets/Nodes/game_manager.tscn" id="3_k66wq"]
+[ext_resource type="PackedScene" uid="uid://7s2j1jifmma3" path="res://Assets/Nodes/play_button.tscn" id="4_dmskq"]
+[ext_resource type="Script" path="res://Assets/Scripts/play_button.gd" id="5_t05so"]
+[ext_resource type="PackedScene" uid="uid://ehshyvbnm6mn" path="res://Assets/Nodes/score_manager.tscn" id="6_t0fh2"]
+[ext_resource type="PackedScene" uid="uid://bl5a0x67q3ihw" path="res://Assets/Nodes/ground.tscn" id="7_ohsk3"]
+[ext_resource type="PackedScene" uid="uid://c5vhv1nxe2sf" path="res://Assets/Nodes/pipe_spawner.tscn" id="8_40n54"]
+[ext_resource type="PackedScene" uid="uid://5x58g25omfo2" path="res://Assets/Nodes/score_text.tscn" id="9_pb13u"]
+[ext_resource type="FontFile" uid="uid://dw54bcin6i5rd" path="res://Assets/Fonts/FlappyBird.ttf" id="10_ptjeu"]
+
+[node name="Main" type="Node"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_3dddm")
+
+[node name="Bird" parent="." instance=ExtResource("1_b3oc8")]
+
+[node name="PipeSpawner" parent="." instance=ExtResource("8_40n54")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="GameManager" parent="." instance=ExtResource("3_k66wq")]
+
+[node name="ScoreManager" parent="." instance=ExtResource("6_t0fh2")]
+
+[node name="Ground" parent="." instance=ExtResource("7_ohsk3")]
+position = Vector2(24, 200)
+
+[node name="ScoreText" parent="." instance=ExtResource("9_pb13u")]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -473.0
+offset_right = -144.0
+offset_bottom = -447.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_ptjeu")
+theme_override_font_sizes/font_size = 36
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play Button" parent="." instance=ExtResource("4_dmskq")]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 32.0
+offset_bottom = 21.0
+script = ExtResource("5_t05so")

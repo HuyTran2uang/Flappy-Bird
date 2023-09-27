@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://5x58g25omfo2"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/ScoreText.gd" id="1_v1py2"]
+
+[node name="ScoreText" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "999"
+script = ExtResource("1_v1py2")
